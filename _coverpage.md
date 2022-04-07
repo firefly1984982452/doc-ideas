@@ -1,7 +1,7 @@
 <img width="180px" style="border-radius: 50%" bor src="https://s1.ax1x.com/2022/03/31/qW8NRK.jpg">
 
-# 前端
+# 灵感和想法
 
-- html+css+js
+- 灵感和想法
 
-[GitHub](https://github.com/Q-Angelo/Nodejs-Roadmap) [开始阅读](README.md)
+[GitHub](https://github.com/firefly1984982452/doc-idea) [开始阅读](README.md)
