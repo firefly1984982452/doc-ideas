@@ -2,6 +2,6 @@
 
 # 灵感和想法
 
-- 灵感和想法
+## 我的灵感和想法
 
-[GitHub](https://github.com/firefly1984982452/doc-idea) [开始阅读](README.md)
+[GitHub](https://github.com/firefly1984982452/doc-idea) [开始阅读](/docs/think/about.md)

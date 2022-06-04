@@ -1,3 +1,5 @@
 # 简介
 
-> 想法和灵感
+[预览地址](https://firefly1984982452.github.io/doc-idea/#/)
+
+本网站使用 `docsify` + `markdown` 生成。

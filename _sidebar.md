@@ -1,4 +1,3 @@
-- [readme](README.md)
 - [关于](/docs/think/about.md)
 
 - 灵感类
