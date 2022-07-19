@@ -6,6 +6,7 @@
   - [和业华的点滴温存](/docs/idea/和业华的点滴温存.md)
   - [我喜欢的诗句](/docs/idea/我喜欢的诗句.md)
   - [已有减肥知识汇总](/docs/idea/已有减肥知识汇总.md)
+  - [锻炼笔记](/docs/idea/锻炼笔记.md)
   - [《躲钉》](/docs/idea/《躲钉》.md)
   - [历史](/docs/idea/历史.md)
 
