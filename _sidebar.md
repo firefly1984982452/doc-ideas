@@ -1,3 +1,4 @@
+- [demo](/docs/demo.md)
 - [关于](/docs/think/about.md)
 
 - 备忘录
