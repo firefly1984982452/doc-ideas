@@ -1,6 +1,6 @@
 # CLI 服务
 
-## 使用命令
+## 1使用命令
 
 在一个 Vue CLI 项目中，`@vue/cli-service` 安装了一个名为 `vue-cli-service` 的命令。你可以在 npm scripts 中以 `vue-cli-service`、或者从终端中以 `./node_modules/.bin/vue-cli-service` 访问这个命令。
 
