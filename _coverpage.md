@@ -4,4 +4,4 @@
 
 ## 我的灵感和想法
 
-[GitHub](https://github.com/firefly1984982452/doc-idea) [开始阅读](/docs/demo.md)
+[GitHub](https://github.com/firefly1984982452/doc-idea) [开始](/docs/demo.md)
