@@ -80,4 +80,8 @@
 - 明朝
 - 清朝
   - [顺治](/docs/history/10清朝/顺治.md)
+  - [康熙](/docs/history/10清朝/康熙.md)
+  - [雍正](/docs/history/10清朝/雍正.md)
+  - [乾隆](/docs/history/10清朝/乾隆.md)
 - 民国
+
