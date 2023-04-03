@@ -1,4 +1,4 @@
-- [demo](/docs/demo.md)
+<!-- - [demo](/docs/demo.md) -->
 - [关于](/docs/think/about.md)
 
 
