@@ -5,9 +5,7 @@
 - 灵感类
 
   - [朝梦夕拾](/docs/idea/朝梦夕拾.md)
-  - [短篇心事](/docs/idea/短篇心事.md)
   - [观世观已录](/docs/idea/观世观已录.md)
-  - [和业华的点滴温存](/docs/idea/和业华的点滴温存.md)
   - [我喜欢的诗句](/docs/idea/我喜欢的诗句.md)
   - [已有减肥知识汇总](/docs/idea/已有减肥知识汇总.md)
   - [《躲钉》](/docs/idea/《躲钉》.md)
