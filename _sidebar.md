@@ -1,5 +1,6 @@
 <!-- - [demo](/docs/demo.md) -->
 - [关于](/docs/think/about.md)
+- [测试](/docs/think/test.md)
 
 
 - 灵感类
