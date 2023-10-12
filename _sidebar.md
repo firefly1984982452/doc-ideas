@@ -7,7 +7,8 @@
 
   - [朝梦夕拾](/docs/idea/朝梦夕拾.md)
   - [观世观已录](/docs/idea/观世观已录.md)
-  - [我和她](/docs/idea/我和她.md)
+  - [与琴说](/docs/idea/与琴说.md)
+  - [与梦说](/docs/idea/与梦说.md)
   - [我喜欢的诗句](/docs/idea/我喜欢的诗句.md)
   - [已有减肥知识汇总](/docs/idea/已有减肥知识汇总.md)
   - [《躲钉》](/docs/idea/《躲钉》.md)
