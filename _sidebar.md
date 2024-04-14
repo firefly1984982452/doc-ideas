@@ -1,5 +1,6 @@
 <!-- - [demo](/docs/demo.md) -->
-- [关于](/docs/think/about.md)
+- [关于博客](/docs/think/about.md)
+- [关于我](/docs/think/aboutMe.md)
 - [测试](/docs/think/test.md)
 
 
