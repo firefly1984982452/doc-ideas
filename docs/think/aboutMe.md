@@ -11,6 +11,7 @@ ISTJ ｜ 天蝎座 ｜ 1996年 ｜ 已婚已育。
 - [世界十大名著](https://firefly1984982452.github.io/doc-read/#/docs/read/%E3%80%8A%E6%88%98%E4%BA%89%E4%B8%8E%E5%92%8C%E5%B9%B3%E3%80%8B)
 - [中国四大名著](https://firefly1984982452.github.io/doc-read/#/docs/read/%E3%80%8A%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89%E3%80%8B)
 
+- [2025年阅读](https://firefly1984982452.github.io/doc-read/#/docs/years/2025)
 - [2024年阅读](https://firefly1984982452.github.io/doc-read/#/docs/years/2024)
 - [2023年阅读](https://firefly1984982452.github.io/doc-read/#/docs/years/2023)
 - [2022年阅读](https://firefly1984982452.github.io/doc-read/#/docs/years/2022)
