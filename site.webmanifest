@@ -1,0 +1,18 @@
+{
+  "name": "丹的灵感手札",
+  "short_name": "灵感手札",
+  "description": "记录灵感、梦、书信与每一年只言片语的个人思想档案。",
+  "lang": "zh-CN",
+  "start_url": "./#/",
+  "display": "standalone",
+  "background_color": "#f5f0e8",
+  "theme_color": "#713d78",
+  "icons": [
+    {
+      "src": "./assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

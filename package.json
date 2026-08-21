@@ -1,0 +1,23 @@
+{
+  "name": "doc-ideas",
+  "version": "2.0.0",
+  "private": true,
+  "description": "丹的灵感手札：Docsify 个人思想档案",
+  "scripts": {
+    "dev": "docsify serve .",
+    "generate": "node scripts/generate-ideas-data.mjs",
+    "check": "node scripts/check-site.mjs",
+    "test": "node --test",
+    "build": "npm run generate && npm run check && npm test"
+  },
+  "devDependencies": {
+    "docsify": "4.13.1",
+    "docsify-cli": "4.4.4",
+    "docsify-copy-code": "3.0.2",
+    "docsify-count": "1.1.0",
+    "docsify-pagination": "2.10.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

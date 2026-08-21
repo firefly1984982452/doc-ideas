@@ -1,0 +1,5 @@
+- [首页](/)
+- [全部档案](/docs/archive.md)
+- [一封信](/docs/letter/2025to2016.md)
+- [一个梦](/docs/idea/朝梦夕拾.md)
+- [关于](/docs/think/about.md)
