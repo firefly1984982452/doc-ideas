@@ -1,88 +1,88 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
-  <title id="title">暮色窗前的灵感手札</title>
-  <desc id="desc">暖色纸张背景上，暮紫色窗景、散落的信纸和一本摊开的手札组成安静的时间档案。</desc>
+  <title id="title">雾灰窗前的灵感手札</title>
+  <desc id="desc">冷白雾灰背景上，深紫窗景、散落的信纸和一本摊开的手札组成安静的时间档案。</desc>
   <defs>
     <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#faf7f0"/>
-      <stop offset=".62" stop-color="#eee5dc"/>
-      <stop offset="1" stop-color="#dfd1cd"/>
+      <stop stop-color="#fafbfc"/>
+      <stop offset=".62" stop-color="#e9ebef"/>
+      <stop offset="1" stop-color="#d7dae1"/>
     </linearGradient>
     <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
-      <stop stop-color="#392848"/>
-      <stop offset=".55" stop-color="#765073"/>
-      <stop offset="1" stop-color="#d39a88"/>
+      <stop stop-color="#242431"/>
+      <stop offset=".55" stop-color="#50465c"/>
+      <stop offset="1" stop-color="#9a839b"/>
     </linearGradient>
     <linearGradient id="desk" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#76504a"/>
-      <stop offset=".5" stop-color="#9a6e61"/>
-      <stop offset="1" stop-color="#654442"/>
+      <stop stop-color="#4b4c55"/>
+      <stop offset=".5" stop-color="#656670"/>
+      <stop offset="1" stop-color="#3b3c44"/>
     </linearGradient>
     <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
-      <stop stop-color="#fffdf7"/>
-      <stop offset="1" stop-color="#eadfd2"/>
+      <stop stop-color="#fefeff"/>
+      <stop offset="1" stop-color="#e5e6eb"/>
     </linearGradient>
     <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
     <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
-      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#39243f" flood-opacity=".22"/>
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#20212a" flood-opacity=".18"/>
     </filter>
   </defs>
 
   <rect width="1600" height="1000" fill="url(#paper)"/>
-  <circle cx="735" cy="150" r="340" fill="#c5a0bd" opacity=".12" filter="url(#blur)"/>
+  <circle cx="735" cy="150" r="340" fill="#8c7892" opacity=".09" filter="url(#blur)"/>
   <path d="M0 790c430-35 876-17 1600-76v286H0Z" fill="url(#desk)"/>
-  <path d="M0 858c470-32 1010 28 1600-20M0 940c520-38 1080 20 1600-24" fill="none" stroke="#3d292c" stroke-width="5" opacity=".18"/>
+  <path d="M0 858c470-32 1010 28 1600-20M0 940c520-38 1080 20 1600-24" fill="none" stroke="#25262d" stroke-width="5" opacity=".16"/>
 
   <g transform="translate(975 82)">
-    <rect width="490" height="560" rx="22" fill="#e2d6cf" stroke="#8d686a" stroke-width="10"/>
+    <rect width="490" height="560" rx="22" fill="#d9dbe1" stroke="#6d6674" stroke-width="10"/>
     <rect x="24" y="24" width="442" height="512" rx="8" fill="url(#dusk)"/>
-    <circle cx="346" cy="132" r="70" fill="#fff0ca" opacity=".92"/>
-    <circle cx="322" cy="110" r="62" fill="#5c3d5d" opacity=".5"/>
-    <g fill="#fff7e6">
+    <circle cx="346" cy="132" r="70" fill="#f3eef5" opacity=".92"/>
+    <circle cx="322" cy="110" r="62" fill="#54475c" opacity=".5"/>
+    <g fill="#f5f3f7">
       <circle cx="77" cy="84" r="3"/><circle cx="136" cy="145" r="2.5"/><circle cx="207" cy="73" r="3.5"/>
       <circle cx="260" cy="178" r="2"/><circle cx="401" cy="247" r="3"/><circle cx="104" cy="265" r="2"/>
     </g>
     <path d="M28 411c86-76 164-91 245-35 55 38 113 40 189-8v164H28Z" fill="#362d42" opacity=".68"/>
     <path d="M28 454c96-49 174-43 251 18 48 38 109 42 183 9v51H28Z" fill="#272435" opacity=".78"/>
-    <path d="M245 28v504M28 302h434" fill="none" stroke="#8d686a" stroke-width="10"/>
+    <path d="M245 28v504M28 302h434" fill="none" stroke="#6d6674" stroke-width="10"/>
   </g>
 
-  <g fill="none" stroke="#713d78" stroke-linecap="round" opacity=".58">
+  <g fill="none" stroke="#6d4b75" stroke-linecap="round" opacity=".58">
     <path d="M760 188c86 28 134 91 128 187-5 82 23 139 83 171" stroke-width="5" stroke-dasharray="2 18"/>
     <path d="M646 280c82 23 118 69 109 137" stroke-width="3" stroke-dasharray="1 14"/>
   </g>
-  <g fill="#713d78">
+  <g fill="#6d4b75">
     <circle cx="758" cy="188" r="7" opacity=".7"/>
     <circle cx="888" cy="375" r="5" opacity=".55"/>
     <path d="m688 223 8 17 18 3-13 13 3 19-16-9-17 9 4-19-14-13 19-3Z" opacity=".32"/>
   </g>
 
   <g transform="translate(650 595) rotate(-7)" filter="url(#shadow)">
-    <rect width="235" height="165" rx="8" fill="#f4e8d9"/>
-    <path d="M24 42h150M24 69h181M24 96h132M24 123h166" stroke="#9c7c88" stroke-width="4" stroke-linecap="round" opacity=".45"/>
-    <path d="m190 24 14 28-30-6Z" fill="#713d78" opacity=".72"/>
+    <rect width="235" height="165" rx="8" fill="#ececf1"/>
+    <path d="M24 42h150M24 69h181M24 96h132M24 123h166" stroke="#77717b" stroke-width="4" stroke-linecap="round" opacity=".45"/>
+    <path d="m190 24 14 28-30-6Z" fill="#6d4b75" opacity=".72"/>
   </g>
   <g transform="translate(1190 610) rotate(8)" filter="url(#shadow)">
-    <rect width="215" height="148" rx="8" fill="#ead7da"/>
-    <path d="M22 39h123M22 66h162M22 93h137M22 120h94" stroke="#79536f" stroke-width="4" stroke-linecap="round" opacity=".46"/>
+    <rect width="215" height="148" rx="8" fill="#e4dfe8"/>
+    <path d="M22 39h123M22 66h162M22 93h137M22 120h94" stroke="#6b586f" stroke-width="4" stroke-linecap="round" opacity=".46"/>
   </g>
 
   <ellipse cx="1035" cy="884" rx="420" ry="62" fill="#38282f" opacity=".23"/>
   <g transform="translate(670 708)" filter="url(#shadow)">
-    <path d="M363 121C274 50 153 31 20 68c77 19 128 75 157 165 81-21 143-5 186 28Z" fill="url(#page)" stroke="#b08b79" stroke-width="3"/>
-    <path d="M363 121c89-71 210-90 343-53-77 19-128 75-157 165-81-21-143-5-186 28Z" fill="url(#page)" stroke="#b08b79" stroke-width="3"/>
-    <path d="M363 121v140" stroke="#9d776e" stroke-width="4"/>
-    <g fill="none" stroke="#997d78" stroke-width="3" opacity=".4">
+    <path d="M363 121C274 50 153 31 20 68c77 19 128 75 157 165 81-21 143-5 186 28Z" fill="url(#page)" stroke="#8e8993" stroke-width="3"/>
+    <path d="M363 121c89-71 210-90 343-53-77 19-128 75-157 165-81-21-143-5-186 28Z" fill="url(#page)" stroke="#8e8993" stroke-width="3"/>
+    <path d="M363 121v140" stroke="#77717f" stroke-width="4"/>
+    <g fill="none" stroke="#73717b" stroke-width="3" opacity=".4">
       <path d="M83 104c78-8 153 10 234 58M72 130c82-5 153 15 229 62M74 158c72 0 140 18 204 57"/>
       <path d="M643 104c-78-8-153 10-234 58M654 130c-82-5-153 15-229 62M652 158c-72 0-140 18-204 57"/>
     </g>
   </g>
 
   <g transform="translate(1338 725)">
-    <path d="M52 85C5 29 13-28 77-68c14 61 6 112-25 153Z" fill="#526758"/>
-    <path d="M55 88c32-64 85-92 151-81-24 62-74 91-151 81Z" fill="#73816d"/>
-    <path d="M51 92v104" stroke="#44594c" stroke-width="8"/>
-    <path d="M4 178h101L92 258H18Z" fill="#65395f"/>
+    <path d="M52 85C5 29 13-28 77-68c14 61 6 112-25 153Z" fill="#56655f"/>
+    <path d="M55 88c32-64 85-92 151-81-24 62-74 91-151 81Z" fill="#78847f"/>
+    <path d="M51 92v104" stroke="#46544f" stroke-width="8"/>
+    <path d="M4 178h101L92 258H18Z" fill="#5c4862"/>
   </g>
 
-  <text x="48" y="970" fill="#f7eee6" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" letter-spacing="3" opacity=".25">彭丹的阅读之旅</text>
+  <text x="48" y="970" fill="#eceef2" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" letter-spacing="3" opacity=".25">彭丹的阅读之旅</text>
 </svg>

@@ -96,12 +96,21 @@
   function mountArticleMeta(entry) {
     var article = document.querySelector('.markdown-section');
     var heading = article && article.querySelector('h1');
-    if (!heading || article.querySelector('.article-meta')) return;
-    var meta = document.createElement('p');
-    meta.className = 'article-meta';
+    if (!heading) return;
+    var row = article.querySelector('.article-meta-row');
+    if (!row) {
+      row = document.createElement('div');
+      row.className = 'article-meta-row';
+      heading.insertAdjacentElement('afterend', row);
+    }
+    var meta = row.querySelector(':scope > .article-meta');
+    if (!meta) {
+      meta = document.createElement('p');
+      meta.className = 'article-meta';
+      row.insertBefore(meta, row.firstChild);
+    }
     meta.innerHTML = '<span>' + escapeHtml(entry.category) + '</span>' +
       (entry.year ? '<span>' + escapeHtml(entry.year) + '</span>' : '');
-    heading.insertAdjacentElement('afterend', meta);
   }
 
   function mountArticleTools(dataset) {
