@@ -397,14 +397,20 @@ html[data-theme='dark'] .theme-toggle svg { transform: rotate(180deg); }
   border: 0;
   color: var(--text-muted);
   cursor: pointer;
-  float: right;
   font-size: 0;
   height: 26px;
-  margin: -.15rem -.2rem 0 .2rem;
+  margin: 0;
   padding: 0;
-  position: relative;
+  position: absolute;
+  right: -.2rem;
+  top: -.15rem;
   width: 26px;
+  z-index: 1;
 }
+
+.sidebar-tree-parent { padding-right: 1.65rem; position: relative; }
+.sidebar-tree-level-2 > .sidebar-group-toggle { height: 22px; right: -.15rem; top: -.08rem; width: 22px; }
+.sidebar-tree-level-2 > .sidebar-group-toggle::before { height: 5px; left: 7px; top: 6px; width: 5px; }
 
 .sidebar-group-toggle::before {
   border-bottom: 1.5px solid currentColor;
@@ -420,6 +426,8 @@ html[data-theme='dark'] .theme-toggle svg { transform: rotate(180deg); }
 }
 
 .sidebar-group-toggle[aria-expanded='false']::before { transform: rotate(-45deg); }
+.sidebar-group-toggle:hover,
+.sidebar-group-toggle:focus-visible { color: var(--accent); }
 
 /* Reading surface */
 .content { left: 0; padding-top: 1rem; }
@@ -510,6 +518,34 @@ body:not(.close) .content { left: var(--sidebar-width); }
 .markdown-section p { margin: 0 0 1.05em; }
 body:not(.home-page):not(.archive-page) .markdown-section > p:not(.article-meta) { text-indent: 2em; }
 .markdown-section li { margin: .15em 0; overflow-wrap: break-word; }
+.markdown-section input[type='checkbox'][disabled] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: color-mix(in srgb, var(--accent-pale), var(--surface) 30%);
+  border: 1.5px solid color-mix(in srgb, var(--accent), transparent 42%);
+  border-radius: .24em;
+  cursor: default;
+  display: inline-grid;
+  height: 1.05em;
+  margin: 0 .42em 0 0;
+  opacity: 1;
+  place-content: center;
+  pointer-events: none;
+  vertical-align: -.12em;
+  width: 1.05em;
+}
+.markdown-section input[type='checkbox'][disabled]:checked {
+  background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--accent), transparent 25%);
+}
+.markdown-section input[type='checkbox'][disabled]:checked::after {
+  border-bottom: 2px solid var(--accent-strong);
+  border-right: 2px solid var(--accent-strong);
+  content: "";
+  height: .52em;
+  transform: rotate(45deg) translate(-.04em, -.02em);
+  width: .28em;
+}
 .markdown-section :where(p, li, blockquote, td, th) strong { color: var(--ink); }
 .markdown-section hr { border: 0; border-top: 1px solid var(--line); margin: 2.6rem 0; }
 
