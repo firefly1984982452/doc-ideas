@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
+import marked from 'marked';
 import path from 'node:path';
 import vm from 'node:vm';
 import { categorize, collectEntries, createDataset, createSlugger } from '../scripts/generate-ideas-data.mjs';
@@ -18,6 +19,10 @@ test('Docsify preserves authored single line breaks', async () => {
   assert.match(site, /node\.nodeName === 'BR'/);
   assert.match(site, /line\.className = 'authored-line'/);
   assert.match(styles, /> \.authored-line\s*\{[^}]*display:\s*block;[^}]*text-indent:\s*2em;/s);
+  assert.match(styles, /> \.authored-line\s*\{[^}]*tab-size:\s*4;[^}]*white-space:\s*break-spaces;/s);
+
+  const indentedLines = marked('首行\n\t制表符行\n    四空格行', { breaks: true });
+  assert.match(indentedLines, /首行<br> {4}制表符行<br> {4}四空格行/);
 });
 
 test('Docsify-compatible slugs preserve Chinese and disambiguate duplicates', () => {
@@ -44,7 +49,12 @@ test('generated data matches the current Markdown collection', async () => {
 });
 
 test('diary calendar recognizes future year routes and real heading variants', async () => {
-  const source = await readFile(path.join(ROOT, 'assets/js/diary-calendar.js'), 'utf8');
+  const [source, ideasSource] = await Promise.all([
+    readFile(path.join(ROOT, 'assets/js/diary-calendar.js'), 'utf8'),
+    readFile(path.join(ROOT, 'assets/js/ideas.js'), 'utf8')
+  ]);
+  assert.match(ideasSource, /entry\.category === '年度片语'/);
+  assert.doesNotMatch(source, /textContent = '年度片语'/);
   const browserWindow = {
     addEventListener() {},
     clearTimeout() {},

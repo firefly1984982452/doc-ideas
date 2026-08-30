@@ -181,28 +181,12 @@
     try { return decodeURIComponent(value); } catch (error) { return value; }
   }
 
-  function ensureMetaRow(article, year) {
-    var heading = article.querySelector('h1');
-    if (!heading) return null;
-    var row = article.querySelector('.article-meta-row');
-    if (!row) {
-      row = document.createElement('div');
-      row.className = 'article-meta-row';
-      row.dataset.calendarFallback = 'true';
-      heading.insertAdjacentElement('afterend', row);
+  function refreshToolbar(toolbar) {
+    if (global.DocIdeas && typeof global.DocIdeas.refreshArticleTools === 'function') {
+      global.DocIdeas.refreshArticleTools();
+    } else {
+      toolbar.hidden = !toolbar.querySelector('.diary-calendar-control');
     }
-    var meta = row.querySelector(':scope > .article-meta');
-    if (!meta) {
-      meta = document.createElement('p');
-      meta.className = 'article-meta';
-      var category = document.createElement('span');
-      var yearLabel = document.createElement('span');
-      category.textContent = '年度片语';
-      yearLabel.textContent = year;
-      meta.append(category, yearLabel);
-      row.insertBefore(meta, row.firstChild);
-    }
-    return row;
   }
 
   function calendarIcon() {
@@ -210,8 +194,11 @@
   }
 
   function makeControl(article, route, year, records) {
-    var row = ensureMetaRow(article, year);
-    if (!row) return null;
+    var toolbar = document.getElementById('idea-tools');
+    if (!toolbar) return null;
+    var obsoleteRow = article.querySelector(':scope > .article-meta-row');
+    if (obsoleteRow) obsoleteRow.remove();
+    article.classList.add('has-diary-calendar');
 
     var control = document.createElement('div');
     var toggle = document.createElement('button');
@@ -219,13 +206,15 @@
     var popoverId = 'diary-calendar-' + year;
     control.className = 'diary-calendar-control';
     control.dataset.diaryYear = String(year);
+    control.dataset.diaryRoute = route;
     toggle.type = 'button';
-    toggle.className = 'diary-calendar-toggle';
+    toggle.className = 'article-tool diary-calendar-toggle';
+    toggle.dataset.tooltip = '日历';
     toggle.setAttribute('aria-haspopup', 'dialog');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', popoverId);
     toggle.setAttribute('aria-label', '打开 ' + year + ' 年日记日历');
-    toggle.innerHTML = calendarIcon() + '<span>日历</span>';
+    toggle.innerHTML = calendarIcon() + '<span class="visually-hidden">日历</span>';
 
     popover.id = popoverId;
     popover.className = 'diary-calendar-popover';
@@ -241,8 +230,10 @@
       '<table class="diary-calendar-table"><thead><tr>' + WEEK_LABELS.map(function (label) { return '<th scope="col">' + label + '</th>'; }).join('') +
       '</tr></thead><tbody></tbody></table>' +
       '<p class="diary-calendar-note" aria-live="polite"></p>';
-    control.append(toggle, popover);
-    row.appendChild(control);
+    control.appendChild(toggle);
+    toolbar.insertBefore(control, toolbar.firstChild);
+    document.body.appendChild(popover);
+    refreshToolbar(toolbar);
 
     var select = popover.querySelector('select');
     var tbody = popover.querySelector('tbody');
@@ -362,7 +353,7 @@
     });
 
     function outsideClick(event) {
-      if (!popover.hidden && !control.contains(event.target)) close(false);
+      if (!popover.hidden && !control.contains(event.target) && !popover.contains(event.target)) close(false);
     }
     function escapeKey(event) {
       if (event.key === 'Escape' && !popover.hidden) {
@@ -378,6 +369,9 @@
       document.removeEventListener('click', outsideClick);
       document.removeEventListener('keydown', escapeKey);
       control.remove();
+      popover.remove();
+      article.classList.remove('has-diary-calendar');
+      refreshToolbar(toolbar);
     };
   }
 

@@ -98,6 +98,10 @@
     var heading = article && article.querySelector('h1');
     if (!heading) return;
     var row = article.querySelector('.article-meta-row');
+    if (entry.category === '年度片语') {
+      if (row) row.remove();
+      return;
+    }
     if (!row) {
       row = document.createElement('div');
       row.className = 'article-meta-row';
@@ -113,17 +117,23 @@
       (entry.year ? '<span>' + escapeHtml(entry.year) + '</span>' : '');
   }
 
+  function refreshArticleTools() {
+    var route = currentRoute();
+    var entry = favoriteButton.currentEntry;
+    var hasEntry = Boolean(entry && normalizeRoute(entry.route) === route);
+    var calendar = tools.querySelector('.diary-calendar-control');
+    var hasCalendar = Boolean(calendar && calendar.dataset.diaryRoute === route);
+    favoriteButton.hidden = !hasEntry;
+    if (!hasEntry) favoriteButton.currentEntry = null;
+    tools.hidden = !hasEntry && !hasCalendar;
+  }
+
   function mountArticleTools(dataset) {
     var entry = matchingEntry(dataset);
-    if (!entry) {
-      tools.hidden = true;
-      favoriteButton.currentEntry = null;
-      return;
-    }
-    tools.hidden = false;
     favoriteButton.currentEntry = entry;
     updateFavoriteButton(entry);
-    mountArticleMeta(entry);
+    refreshArticleTools();
+    if (entry) mountArticleMeta(entry);
   }
 
   function formatCharacters(value) {
@@ -339,6 +349,7 @@
   });
 
   document.addEventListener('doc-ideas:rendered', function () {
+    refreshArticleTools();
     data().then(mount).catch(showDataError);
   });
 
@@ -346,6 +357,7 @@
     data: data,
     escapeHtml: escapeHtml,
     entryHref: entryHref,
-    normalizeRoute: normalizeRoute
+    normalizeRoute: normalizeRoute,
+    refreshArticleTools: refreshArticleTools
   };
 }(window));
